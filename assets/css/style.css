@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+#messageList {
+  min-height: 293px;
+}
+
+.custom-footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+.custom-footer a {
+    text-decoration: none;
+}
+
+.custom-footer a:hover {
+    opacity: 0.7;
+}
