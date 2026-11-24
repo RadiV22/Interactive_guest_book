@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest Book — Tinggalkan Pesan</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- CSS custom setelah Bootstrap -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="page-container header-inner" aria-label="Navigasi utama">
+        <a class="brand" href="./index.html">
+          <span class="brand-icon">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+          </span>
+          Guest<span>Book.</span>
+        </a>
+
+        <a class="header-link" href="#guestForm">
+          Tulis pesan
+          <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </header>
+
+    <main class="page-container">
+      <section class="page-intro">
+        <span class="eyebrow">SENANG KAMU MAMPIR</span>
+        <h1>Setiap kunjungan punya cerita.</h1>
+        <p>
+          Tinggalkan sapaan, kesan, atau sedikit cerita. Kami senang
+          mendengarnya.
+        </p>
+      </section>
+
+      <div class="guest-layout">
+        <section class="form-panel" aria-labelledby="formTitle">
+          <span class="section-icon">
+            <i class="fa-regular fa-pen-to-square" aria-hidden="true"></i>
+          </span>
+
+          <h2 id="formTitle">Tinggalkan pesan</h2>
+          <p class="section-description">
+            Beberapa kata darimu berarti banyak.
+          </p>
+
+          <form id="guestForm">
+            <div class="field-group">
+              <label for="fullName">Nama lengkap</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Siapa namamu?"
+                autocomplete="name"
+                maxlength="80"
+                required
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="message">Pesanmu</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Tulis sapaan atau ceritamu di sini..."
+                maxlength="1000"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">
+              Kirim pesan
+              <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+            </button>
+
+            <p id="submitStatus" class="submit-status" role="status"></p>
+          </form>
+
+          <p class="form-note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            Pesan pada demo ini akan hilang saat halaman dimuat ulang.
+          </p>
+        </section>
+
+        <section class="messages-panel" aria-labelledby="messagesTitle">
+          <div class="messages-header">
+            <div>
+              <span class="eyebrow">RUANG SAPA</span>
+              <h2 id="messagesTitle">Cerita dari pengunjung</h2>
+            </div>
+
+            <span id="messageCount" class="message-count">0 pesan</span>
+          </div>
+
+          <div id="emptyMessage" class="empty-message">
+            <span class="empty-icon">
+              <i class="fa-regular fa-comments" aria-hidden="true"></i>
+            </span>
+
+            <h3>Jadilah yang pertama menyapa.</h3>
+            <p>
+              Belum ada pesan di sini. Tulis pesan pertamamu melalui form di
+              samping.
+            </p>
+          </div>
+
+          <ul id="messageList" aria-label="Pesan pengunjung"></ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="custom-footer">
+      <div class="page-container footer-inner">
+        <span>Terima kasih sudah meninggalkan cerita.</span>
+        <p>&copy; 2026 GuestBook.</p>
+      </div>
+    </footer>
+
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
